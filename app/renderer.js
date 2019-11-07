@@ -16,6 +16,9 @@ const videoInput = document.getElementById('video_name');
 var folderForVideo;
 var videoName = videoInput.value;
 
+var currentActivityName; 
+var packageNameEl = document.getElementById('packageName');
+
 
 function hideStatusNav(){
     execCMD(adbPath + 'adb shell settings put global policy_control immersive.status=*',"进入沉浸模式");
@@ -73,6 +76,20 @@ function installSelectedAPK(){
     });
 
 
+}
+
+function getCurrentActivityPackageNames(){
+    exec(adbPath + "adb shell dumpsys activity recents | grep 'Recent #0' | cut -d= -f2 | sed 's| .*||' | cut -d '/' -f1", function(error, stdout, stderr){
+        if(error) {
+            console.error('error: ' + error);
+            return;
+        }
+        console.log("获取当前包名: " + ':\n' + stdout);
+        currentActivityName = stdout;
+        packageNameEl.innerHTML = stdout;
+    });
+
+    
 }
 
 function restart(){

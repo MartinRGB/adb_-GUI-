@@ -38,17 +38,24 @@
     <div class="sections">
       <div class="lines">
         文件名 <input id="video_name" type="text" value="video" onchange="changeVideoName(event)"> .mp4
-        
       </div>
       <div class="lines">
-      默认储存在在 '~' <button onclick="selectDirectory()">选择录屏保存目录</button> </div>
+        默认储存在在 '~' <button onclick="selectDirectory()">选择录屏保存目录</button> 
+      </div>
       <div class="lines">
         <button onclick="startRecord()">开始录制</button>
         <button onclick="stopRecord()">停止录制</button>
       </div>
-      <div class="lines">
 
     </div>
+
+    <div class="sections">
+      <div class="lines">
+        <button onclick="getCurrentActivityPackageNames()">获取当前应用包名</button>
+        <p id="packageName"></p>
+      </div>
+    </div>
+
 
     <script src="./renderer.js"></script>
 
