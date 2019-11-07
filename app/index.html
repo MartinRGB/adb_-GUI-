@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>ADB 傻瓜工具箱</title>
+  </head>
+  <style>
+    .sections{
+      position: relative;
+      display: block;
+      padding: 20px;
+    }
+    .lines{
+      position: relative;
+      display: block;
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <!-- <h1>Hello World!</h1>
+    We are using Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    and Electron <span id="electron-version"></span>. -->
+
+    <!-- You can also require other files to run in this process -->
+    <div class="sections">
+
+        <button class="lines" onclick="hideStatusNav()">沉浸模式</button>
+        <button class="lines" onclick="showStatusNav()">正常模式</button>
+    </div>
+
+    <div class="sections">
+      <div class="lines">
+        <button onclick="installSelectedAPK()">安装所选 APK</button> <button onclick="restart()">重启手机</button>
+      </div>
+    </div>
+
+    <div class="sections">
+      <div class="lines">
+        文件名 <input id="video_name" type="text" value="video" onchange="changeVideoName(event)"> .mp4
+        
+      </div>
+      <div class="lines">
+      默认储存在在 '~' <button onclick="selectDirectory()">选择录屏保存目录</button> </div>
+      <div class="lines">
+        <button onclick="startRecord()">开始录制</button>
+        <button onclick="stopRecord()">停止录制</button>
+      </div>
+      <div class="lines">
+
+    </div>
+
+    <script src="./renderer.js"></script>
+
+  </body>
+</html>
+

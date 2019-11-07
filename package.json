@@ -1,0 +1,26 @@
+{
+  "name": "electron-quick-start",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "./electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . ADBShell --overwrite --platform=darwin --arch=x64 --icon=./assets//electron.icns --prune=true --out=release-builds"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {},
+  "dependencies": {
+    "Promise": "^1.0.5",
+    "electron": "^7.1.0",
+    "electron-packager": "^14.1.0"
+  }
+}
