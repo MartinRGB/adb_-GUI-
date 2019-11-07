@@ -4,3 +4,7 @@
 
 
 for guys know little abt adb
+
+- 强制安装 APK 有风险，安装前需备份
+
+- 部分不自觉手机厂商屏蔽了 adb 录屏功能
